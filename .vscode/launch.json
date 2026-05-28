@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Iniciar Chrome para CEPRETEC",
+            "url": "http://localhost/cepretec_system-main",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

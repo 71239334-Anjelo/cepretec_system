@@ -1,0 +1,141 @@
+.filtros-ranking {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filtros-ranking select {
+    padding: 12px 18px;
+    border: 2px solid #e0e7f0;
+    border-radius: 12px;
+    font-size: 14px;
+    background: white;
+}
+
+.filtros-ranking button {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filtros-ranking button:hover {
+    background: #ff9900;
+}
+
+.top-alumnos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.top-card {
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.top-card:hover {
+    transform: translateY(-5px);
+}
+
+.top-card .medal {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.top-card .nombre {
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.top-card .programa {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.top-card .promedio {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff9900;
+}
+
+.top-card.position-1 {
+    border-top: 5px solid #ffd700;
+}
+
+.top-card.position-2 {
+    border-top: 5px solid #c0c0c0;
+}
+
+.top-card.position-3 {
+    border-top: 5px solid #cd7f32;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+table th {
+    background: #003366;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eef2f7;
+}
+
+table tr:hover {
+    background: #f9fbfd;
+}
+
+.rank-1 {
+    background: #ffd700;
+    font-weight: 700;
+    border-radius: 20px;
+    display: inline-block;
+    width: 30px;
+}
+
+.rank-2 {
+    background: #c0c0c0;
+    font-weight: 700;
+    border-radius: 20px;
+    display: inline-block;
+    width: 30px;
+}
+
+.rank-3 {
+    background: #cd7f32;
+    font-weight: 700;
+    border-radius: 20px;
+    display: inline-block;
+    width: 30px;
+}

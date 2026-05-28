@@ -1,0 +1,88 @@
+/* REPORT GRID */
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.report-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.report-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.report-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.report-card p {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.btn-generar {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-generar:hover {
+    background: #ff9900;
+}
+
+/* REPORTES RÁPIDOS */
+.rapidos-section {
+    margin-top: 40px;
+}
+
+.rapidos-section h3 {
+    color: #003366;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.rapidos-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-rapido {
+    background: #f0f2f5;
+    color: #003366;
+    border: 1px solid #e0e7f0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-rapido:hover {
+    background: #003366;
+    color: white;
+    border-color: #003366;
+}

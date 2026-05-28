@@ -1,0 +1,274 @@
+/* ==========================================
+   VARIABLES DE COLOR Y CONFIGURACIÓN GENERAL
+   ========================================== */
+:root {
+  --bg-main: #f8fafc;        /* Gris ultra claro para el fondo */
+  --bg-card: #ffffff;        /* Blanco puro para contenedores */
+  --sidebar-bg: #0f172a;     /* Slate oscuro para el menú lateral */
+  --sidebar-hover: #1e293b;  
+  --text-main: #1e293b;      /* Texto principal casi negro */
+  --text-muted: #64748b;     /* Texto secundario gris */
+  --border-color: #e2e8f0;   /* Bordes ultra delgados y suaves */
+  
+  /* Colores de Marca y Estados */
+  --primary: #2563eb;        /* Azul moderno para botones principales */
+  --primary-hover: #1d4ed8;
+  
+  --success-bg: #dcfce7;     /* Matriculado (Pastel) */
+  --success-text: #15803d;
+  
+  --warning-bg: #ffedd5;     /* Pendiente (Pastel) */
+  --warning-text: #c2410c;
+  
+  --purple-bg: #f3e8ff;      /* Graduado (Pastel) */
+  --purple-text: #6b21a8;
+  
+  --danger-bg: #fee2e2;      /* Cancelado (Pastel) */
+  --danger-text: #b91c1c;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+/* ==========================================
+   BARRA LATERAL (SIDEBAR)
+   ========================================== */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  padding: 24px 16px;
+}
+
+.sidebar .brand {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  padding-left: 12px;
+  border-left: 4px solid #f97316; /* Detalle naranja original */
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  color: #94a3b8;
+  padding: 12px;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar a:hover, .sidebar a.active {
+  background-color: var(--sidebar-hover);
+  color: #ffffff;
+}
+
+.sidebar a.active {
+  border-left: 4px solid var(--primary);
+  background-color: rgba(37, 99, 235, 0.1);
+  color: #3b82f6;
+}
+
+/* ==========================================
+   TARJETAS DE CONTADOR (CARDS)
+   ========================================== */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea sutil decorativa en lugar del borde grueso anterior */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+.card-activas::before { background-color: var(--primary); }
+.card-pendientes::before { background-color: #f97316; }
+.card-canceladas::before { background-color: #ef4444; }
+
+.card-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.card-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   FILTROS Y BUSCADORES
+   ========================================== */
+.filters-section {
+  background: var(--bg-card);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.select-filter {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #ffffff;
+  color: var(--text-main);
+  outline: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.select-filter:focus {
+  border-color: var(--primary);
+}
+
+.btn-filter {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-filter:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ==========================================
+   TABLA DE MATRÍCULAS MODERNA
+   ========================================== */
+.table-container {
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  background-color: #f8fafc;
+  color: var(--text-muted);
+  padding: 16px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+td {
+  padding: 16px 20px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: #fdfdfd; /* Efecto hover ultra suave */
+}
+
+/* Código de matrícula resaltado sutilmente */
+.td-codigo {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.td-alumno {
+  font-weight: 600;
+}
+
+/* ==========================================
+   BADGES DE ESTADO (ETIQUETAS)
+   ========================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 50px; /* Bordes completamente redondeados */
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.badge-matriculado {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.badge-pendiente {
+  background-color: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+.badge-graduado {
+  background-color: var(--purple-bg);
+  color: var(--purple-text);
+}
+
+/* ==========================================
+   BOTONES DE ACCIÓN ("VER")
+   ========================================== */
+.btn-action {
+  background-color: #eff6ff;
+  color: var(--primary);
+  border: 1px solid #bfdbfe;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
