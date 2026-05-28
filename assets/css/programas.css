@@ -1,0 +1,104 @@
+/* PROGRAMS GRID */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.program-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.program-header {
+    background: linear-gradient(135deg, #003366, #0055aa);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.program-header h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.program-header .duracion {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.program-body {
+    padding: 20px;
+}
+
+.program-body p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.program-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .numero {
+    font-size: 22px;
+    font-weight: 700;
+    color: #003366;
+}
+
+.stat .label {
+    font-size: 12px;
+    color: #888;
+}
+
+.btn-programa {
+    width: 100%;
+    background: #ff9900;
+    color: #003366;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-programa:hover {
+    background: #e68a00;
+    transform: scale(0.98);
+}
+
+.btn-agregar-programa {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.btn-agregar-programa:hover {
+    background: #ff9900;
+}

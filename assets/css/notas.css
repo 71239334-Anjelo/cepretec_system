@@ -1,0 +1,141 @@
+.filtros-notas {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filtros-notas select, .filtros-notas input {
+    padding: 12px 18px;
+    border: 2px solid #e0e7f0;
+    border-radius: 12px;
+    font-size: 14px;
+    background: white;
+}
+
+.filtros-notas select:focus, .filtros-notas input:focus {
+    outline: none;
+    border-color: #ff9900;
+}
+
+.filtros-notas button {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filtros-notas button:hover {
+    background: #ff9900;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+table th {
+    background: #003366;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eef2f7;
+}
+
+table tr:hover {
+    background: #f9fbfd;
+}
+
+.nota {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.nota-alta {
+    color: #10b981;
+}
+
+.nota-media {
+    color: #f59e0b;
+}
+
+.nota-baja {
+    color: #dc3545;
+}
+
+.aprobado {
+    background: #10b981;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.desaprobado {
+    background: #dc3545;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn-nota {
+    background: #ff9900;
+    color: #003366;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-nota:hover {
+    transform: scale(1.05);
+}
+
+.promedio-general {
+    background: linear-gradient(135deg, #003366, #0055aa);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.promedio-general .label {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.promedio-general .valor {
+    font-size: 36px;
+    font-weight: 700;
+}

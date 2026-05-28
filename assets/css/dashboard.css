@@ -1,0 +1,252 @@
+/* ==========================================================================
+   LAYOUT PRINCIPAL (Tus estilos base)
+   ========================================================================== */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* MENU LATERAL */
+.sidebar {
+    width: 280px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #003366 0%, #001a33 100%);
+    color: white;
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #ff9900;
+    display: inline-block;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 5px 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    display: block;
+    padding: 12px 18px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.sidebar ul li a:hover {
+    background: #ff9900;
+    color: #003366;
+    transform: translateX(8px);
+    font-weight: 600;
+}
+
+/* CONTENIDO PRINCIPAL */
+.content {
+    flex: 1;
+    padding: 30px 40px;
+    background: #f5f7fb;
+}
+
+.content h1 {
+    color: #003366;
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-weight: 700;
+    border-left: 5px solid #ff9900;
+    padding-left: 20px;
+}
+
+/* ==========================================================================
+   REQUISITO: TARJETAS ESTADÍSTICAS (Actualizado e Integrado)
+   ========================================================================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    border-left: 4px solid #ff9900;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: #003366;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff9900;
+}
+
+/* ==========================================================================
+   REQUISITO: NUEVA SECCIÓN DE NOTIFICACIONES / ALERTAS
+   ========================================================================== */
+.alerts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.alert {
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    border-left: 5px solid transparent;
+    font-family: sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left-color: #ff9900; /* Combina con tu naranja secundario */
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-left-color: #003366; /* Combina con tu azul principal */
+}
+
+/* ==========================================================================
+   REQUISITO: NUEVA SECCIÓN DE GRÁFICOS (Grid Responsivo)
+   ========================================================================== */
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.chart-box {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-box h3 {
+    color: #003366;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-left: 4px solid #ff9900;
+    padding-left: 10px;
+}
+
+/* ==========================================================================
+   REQUISITO: TABLAS Y COMPONENTES DE ALUMNOS MATRICULADOS
+   ========================================================================== */
+.section-title {
+    color: #003366;
+    margin: 30px 0 20px 0;
+    font-size: 22px;
+    border-left: 4px solid #ff9900;
+    padding-left: 15px;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+table th {
+    background: #003366;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eef2f7;
+}
+
+table tr:hover {
+    background: #f9fbfd;
+}
+
+.badge-activo {
+    background: #10b981;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* ==========================================================================
+   SECCIÓN DE DISEÑO RESPONSIVO (Tus Reglas + Adaptación de Gráficos)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        position: relative;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+    
+    .content h1 {
+        font-size: 24px;
+    }
+
+    /* Ajuste para que los gráficos ocupen el ancho completo en tablets o móviles */
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 20px;
+    }
+}
